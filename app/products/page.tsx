@@ -1,8 +1,9 @@
-// app/product/page.tsx
 import axios from 'axios';
 import ProductList from '@/components/ProductList';
+import Navbar from '@/components/Navbar';
+import DarkVeil from '@/components/DarkVeil';
 
-// --- Tipe Data (masih kita butuhkan di sini) ---
+// --- Tipe Data ---
 type TradingPair = {
   id: string;
   ticker_id: string;
@@ -20,7 +21,7 @@ type CombinedData = TradingPair & {
   volume: string;
 };
 
-// --- Fungsi Pengambilan Data (tidak ada yang berubah di sini) ---
+// --- Fungsi Pengambilan Data ---
 async function getCombinedCryptoData(): Promise<CombinedData[]> {
     const pairsUrl = 'https://indodax.com/api/pairs';
     const summariesUrl = 'https://indodax.com/api/summaries';
@@ -46,15 +47,26 @@ async function getCombinedCryptoData(): Promise<CombinedData[]> {
     }
 }
 
-// --- Komponen Halaman (sekarang lebih sederhana) ---
+
+// --- Komponen Halaman ---
 export default async function ProductPage() {
   const cryptoData = await getCombinedCryptoData();
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-center mb-4">Daftar Pasar Kripto</h1>
-      {/* Panggil Client Component dan oper data lengkapnya */}
-      <ProductList items={cryptoData} />
-    </div>
+    <>
+     
+      <DarkVeil
+        className="fixed top-0 left-0 -z-10"
+      />
+
+      {/* Konten utama di lapisan depan */}
+      <div className="relative z-0">
+        <Navbar />
+        <main className="container mx-auto p-4 bg-transparent mt-7">
+          <h1 className="text-3xl font-bold text-center my-6 ">Daftar Pasar Kripto</h1>
+          <ProductList items={cryptoData} />
+        </main>
+      </div>
+    </>
   );
 }
