@@ -8,15 +8,8 @@ Sebuah aplikasi web sederhana untuk melacak harga dan volume pasar aset kripto, 
 
 Aplikasi ini sudah di-deploy dan dapat diakses melalui link berikut:
 
-**[Link ke Aplikasi Anda yang Sudah di-Deploy]**
+cryptotract-ashy.vercel.app
 
----
-
-## 📸 Tampilan Aplikasi
-
-
-
-*Tampilan halaman utama yang menampilkan top 5 kripto dan halaman produk dengan fitur pencarian.*
 
 ---
 
