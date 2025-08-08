@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CryptoTracker - Landing Page Aset Kripto
 
-## Getting Started
+Sebuah aplikasi web sederhana untuk melacak harga dan volume pasar aset kripto, dibangun sebagai bagian dari *front-end skill test*. Aplikasi ini mengambil data secara *live* dari API publik Indodax dan menampilkannya dalam antarmuka yang bersih dan responsif.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aplikasi ini sudah di-deploy dan dapat diakses melalui link berikut:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**[Link ke Aplikasi Anda yang Sudah di-Deploy]**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📸 Tampilan Aplikasi
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+*Tampilan halaman utama yang menampilkan top 5 kripto dan halaman produk dengan fitur pencarian.*
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Fitur Utama
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   **Halaman Utama Dinamis**: Menampilkan 5 aset kripto teratas berdasarkan volume trading secara *real-time*.
+-   **Daftar Produk Lengkap**: Halaman produk menampilkan semua pasangan aset yang tersedia dari API, lengkap dengan harga dan volume.
+-   **Fitur Pencarian**: Pengguna dapat dengan mudah mencari aset kripto berdasarkan nama di halaman produk.
+-   **Desain Responsif**: Tampilan dioptimalkan untuk berbagai ukuran layar, dari desktop hingga mobile, termasuk *hamburger menu* pada navbar.
+-   **Latar Belakang Animasi**: Menggunakan WebGL untuk menciptakan latar belakang dinamis dan menarik tanpa mengganggu performa.
+-   **Halaman Informatif**: Halaman "About" berisi *disclaimer* dan saran investasi yang relevan.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+-   **Framework**: Next.js (React)
+-   **Bahasa**: TypeScript
+-   **Styling**: Tailwind CSS
+-   **Pengambilan Data**: Axios
+-   **Animasi**: OGL (untuk latar belakang WebGL)
+-   **Linting**: ESLint
+
+---
+
+## ⚙️ Menjalankan Aplikasi Secara Lokal
+
+Untuk menjalankan proyek ini di komputermu, ikuti langkah-langkah berikut:
+
+**1. Clone Repositori**
+   ```bash
+   git clone [URL_REPOSITORY_ANDA]
+   cd [NAMA_FOLDER_PROYEK]
+   ```
+
+**2. Instalasi Dependensi**
+   Gunakan `npm` atau `yarn` untuk menginstal semua paket yang dibutuhkan.
+   ```bash
+   npm install
+   ```
+   atau
+   ```bash
+   yarn install
+   ```
+
+**3. Jalankan Server Pengembangan**
+   Jalankan perintah di bawah ini untuk memulai aplikasi pada mode pengembangan.
+   ```bash
+   npm run dev
+   ```
+
+**4. Buka Aplikasi**
+   Buka browser dan kunjungi `http://localhost:3000` untuk melihat hasilnya.
+
+---
+
+## 🔌 API
+
+Aplikasi ini menggunakan API publik dari **Indodax**:
+-   `https://indodax.com/api/pairs` untuk mendapatkan daftar semua aset.
+-   `https://indodax.com/api/summaries` untuk mendapatkan data harga dan volume terbaru.
